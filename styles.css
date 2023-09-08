@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins" sans-serif;
-  padding: 40px  100px;
+  padding: 40px 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,22 +21,26 @@ section div {
   justify-content: flex-start;
   align-items: flex-start;
 }
+section div > h3 {
+  font-family: sans-serif;
+  color: rgb(187, 126, 241);
+}
 section ol li,
 section ul li {
   padding: 3px 0px;
 }
 section ul li span {
-  color: cadetblue;
+  color: rgb(9, 124, 232);
   font-weight: 600;
 }
 section ol li span {
-  color: cadetblue;
+  color: rgb(6, 145, 231);
   font-weight: 600;
 }
-section ul li ul{
-    padding-left: 10px;
+section ul li ul {
+  padding-left: 10px;
 }
-section ul li ul  li span{
-    color: rgb(5, 178, 235) !important;
-    font-weight: 600;
+section ul li ul li span {
+  color: rgb(5, 116, 235) !important;
+  font-weight: 600;
 }
