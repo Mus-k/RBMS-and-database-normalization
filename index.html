@@ -168,98 +168,100 @@
         </ol>
       </div>
       <div class="questionThree">
-        <h3>3. What is DBMS? What was the need for DBMS?.</h3>
-        <p>
-          DBMS stands for Database Management Systems, and are software systems
-          used to store, retrieve, and run queries on data. A DBMS serves as an
-          interface between an end-user and a database, allowing users to
-          create, read, update, and delete data in the database.
-        </p>
+        <h3>
+          3. What is the importance of Relationships in a Database management
+          system? Explain the types of relationships.
+        </h3>
+        <p>Importance of Relationships in a DBMS:</p>
         <ul>
           <li>
-            <span> The need for it are:</span>
-          </li>
-          <li>
-            <span>
-              DBMS helps reduce redundancy and ensures data consistency by
-              storing data in a centralized database.
+            <span
+              >Data Integrity, Reduced Data Redundancy, Efficient Data
+              Retrieval,Maintainability
             </span>
           </li>
           <li>
-            <span
-              >DBMS enforces data integrity constraints, preventing data
-              inconsistencies and ensuring that data adheres to predefined
-              rules.</span
-            >
+            <span> Types of Relationships in a DBMS </span>
           </li>
+          <ol>
+            <li>
+              <span>One-to-One (1:1)</span>
+              In a one-to-one relationship, one record in the first table
+              corresponds to one record in the second table.
+            </li>
 
-          <li>
-            <span>
-              DBMS provides robust security mechanisms, including access control
-              and encryption, to protect sensitive data from unauthorized
-              access.</span
-            >
-          </li>
-          <li>
-            <span>
-              DBMS simplifies data retrieval and manipulation through powerful
-              query languages, making it easier for users and applications to
-              extract meaningful information from the database.</span
-            >
-          </li>
-          <li>
-            <span>
-              In multi-user environments, DBMS ensures that multiple users can
-              access and modify data concurrently without causing conflicts or
-              data corruption.</span
-            >
-          </li>
-          <li>
-            <span
-              >DBMS systems can scale to accommodate growing data volumes and
-              user loads, making them suitable for both small-scale and
-              enterprise-level applications.</span
-            >
-          </li>
-          <li>
-            <span>
-              DBMS allows for the establishment of relationships between data
-              tables, enabling complex queries and analysis.</span
-            >
-          </li>
-          <li>
-            <span
-              >DBMS offers tools and mechanisms for data backup and recovery,
-              ensuring data durability and resilience against data loss.</span
-            >
-          </li>
+            <li>
+              <span> One-to-Many (1:N)</span>
+              n a one-to-many relationship, one record in the first table can
+              correspond to multiple records in the second table.
+            </li>
+            <li>
+              <span> Many-to-One (N:1)</span>
+              In a many-to-one relationship, multiple records in the first table
+              can correspond to one record in the second table.
+            </li>
+            <li>
+              <span> Many-to-Many (N:N)</span>
+              In a many-to-many relationship, multiple records in the first
+              table can correspond to multiple records in the second table.
+            </li>
+            <li>
+              <span> Self-Referential Relationship</span>
+              A self-referential relationship occurs when a table relates to
+              itself. This can be used to model hierarchical data structures or
+              relationships within the same entity. For example, in an
+              organization's employee database, employees may have supervisors
+              who are also employees.
+            </li>
+          </ol>
         </ul>
       </div>
       <div class="questionFour">
         <h3>
-          4. Explain five challenges of file base storage system which was
-          tackle by DBMS?
+          4. Explain the different types of Keys in RDBMS considering a
+          real-life scenario.
         </h3>
-
+        <p>
+          In a Relational Database Management System (RDBMS), keys are used to
+          uniquely identify and establish relationships between records in
+          tables. Each key type serves a specific purpose in maintaining data
+          integrity and facilitating efficient data retrieval.
+        </p>
         <ol>
           <li>
-            <span> Data Redundancy and Inconsistency:</span>DBMS centralizes
-            data storage into structured tables with predefined relationships,
-            reducing data redundancy and ensuring data consistency through data
-            integrity constraints.
+            <span> Primary Key (PK)</span>
+
+            <ul>
+              <li>
+                <span>Definition</span>A primary key uniquely identifies each
+                record (row) in a table. It ensures that there are no duplicate
+                values within the key column, and it cannot contain NULL values.
+              </li>
+              <li>
+                <span>Example</span> In the "Books" table, you can have a
+                primary key named "BookID" that uniquely identifies each book.
+                This ID is typically an auto-incrementing integer value,
+                ensuring every book has a unique identifier.
+              </li>
+            </ul>
           </li>
           <li>
-            <span>Limited Data Retrieval and Query Capabilities:</span>DBMS
-            provides a powerful query language (e.g., SQL) and indexing
-            mechanisms, allowing users to retrieve and filter data efficiently,
-            perform complex queries, and aggregate information from the
-            database.
+            <span>Foreign Key (FK):</span>
+<ul>
+  <li> <span>Definition </span>A foreign key establishes a link between two tables by referencing the primary key of another table. It enforces referential integrity, ensuring that values in the foreign key column match existing values in the referenced primary key column. </li>
+  <li> <span> Example</span>
+    In the "Loans" table, you might have a foreign key named "BorrowerID" that references the "Borrowers" table's primary key, linking each loan to a specific borrower. This ensures that loans are only associated with valid borrowers. </li>
+</ul>
+
+          
           </li>
           <li>
-            <span>Concurrency Issues:</span>DBMS systems implement concurrency
-            control mechanisms, such as locking and transaction management, to
-            ensure data integrity when multiple users access and modify data
-            simultaneously.
+            <span>Unique Key (UK):</span>
+
+            <ul>
+              <li> <span> </span> </li>
+              <li> <span> </span> </li>
+            </ul>
           </li>
           <li>
             <span>Data Integrity and Validation:</span>DBMS enforces data
