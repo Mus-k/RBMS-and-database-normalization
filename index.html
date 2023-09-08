@@ -247,192 +247,151 @@
           </li>
           <li>
             <span>Foreign Key (FK):</span>
-<ul>
-  <li> <span>Definition </span>A foreign key establishes a link between two tables by referencing the primary key of another table. It enforces referential integrity, ensuring that values in the foreign key column match existing values in the referenced primary key column. </li>
-  <li> <span> Example</span>
-    In the "Loans" table, you might have a foreign key named "BorrowerID" that references the "Borrowers" table's primary key, linking each loan to a specific borrower. This ensures that loans are only associated with valid borrowers. </li>
-</ul>
-
-          
+            <ul>
+              <li>
+                <span>Definition </span>A foreign key establishes a link between
+                two tables by referencing the primary key of another table. It
+                enforces referential integrity, ensuring that values in the
+                foreign key column match existing values in the referenced
+                primary key column.
+              </li>
+              <li>
+                <span> Example</span> In the "Loans" table, you might have a
+                foreign key named "BorrowerID" that references the "Borrowers"
+                table's primary key, linking each loan to a specific borrower.
+                This ensures that loans are only associated with valid
+                borrowers.
+              </li>
+            </ul>
           </li>
           <li>
             <span>Unique Key (UK):</span>
 
             <ul>
-              <li> <span> </span> </li>
-              <li> <span> </span> </li>
+              <li>
+                <span> Definition</span> A unique key, like a primary key,
+                enforces uniqueness within a column but allows NULL values. It
+                ensures that no duplicate non-NULL values exist in the specified
+                column.
+              </li>
+              <li>
+                <span> Example </span> In the "Borrowers" table, you could have
+                a unique key on the "Email" column to ensure that no two
+                borrowers share the same email address, but it allows some
+                borrowers not to provide an email address.
+              </li>
             </ul>
           </li>
           <li>
-            <span>Data Integrity and Validation:</span>DBMS enforces data
-            integrity constraints, such as primary keys, foreign keys, and data
-            type validation, to maintain data accuracy and consistency.
+            <span>Candidate Key:</span>
+
+            <ul>
+              <li>
+                <span> Definition</span> A candidate key is a column or set of
+                columns that could potentially become a primary key. It
+                satisfies the uniqueness and non-null requirements but hasn't
+                been selected as the primary key yet.
+              </li>
+              <li>
+                <span>Example</span> In the "Borrowers" table, both "BorrowerID"
+                and "LibraryCardNumber" could serve as candidate keys, as they
+                meet the criteria for primary keys. The database designer would
+                choose one to be the actual primary key.
+              </li>
+            </ul>
           </li>
           <li>
-            <span> Limited Security Controls:</span> DBMS provides comprehensive
-            security mechanisms, including user authentication, authorization,
-            and encryption, to safeguard data from unauthorized access and
-            maintain data confidentiality.
+            <span>Composite Key</span>
+
+            <ul>
+              <li>
+                <span> Definition</span> A composite key is a combination of two
+                or more columns used together to uniquely identify records
+                within a table. Individually, the columns may not be unique, but
+                their combination is.
+              </li>
+              <li>
+                <span>Example </span> In the "Loans" table, you might use a
+                composite key consisting of "BookID" and "BorrowerID" to
+                uniquely identify each loan, as a single borrower can borrow
+                multiple copies of the same book.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>Super Key</span>
+
+            <ul>
+              <li>
+                <span> Definition</span>
+                A super key is a set of one or more columns that can uniquely
+                identify records in a table. It may contain more columns than
+                necessary to form a minimal key.
+              </li>
+              <li>
+                <span>Example </span> In the "Books" table, a super key could be
+                a combination of "ISBN" and "Author," as this combination could
+                uniquely identify books. However, it's not a minimal super key
+                because just "ISBN" alone would suffice.
+              </li>
+            </ul>
           </li>
         </ol>
       </div>
       <div class="questionFive">
-        <h3>
-          5. List out the different types of classification in DBMS and explain
-          them in depth
-        </h3>
-
+        <h3>5.Write a short note on Single Responsibility Principle.</h3>
+        <p>
+          The Single Responsibility Principle (SRP) is the concept that any
+          single object in object-oriented programing (OOP) should be made for
+          one specific function.
+        </p>
         <ol>
           <li>
-            <span> Based on Data Model:</span>
+            <span>
+              Key points of the Single Responsibility Principle (SRP):</span
+            >
 
-            <ul>
+            <ol>
               <li class="nested">
-                <span>Relational DBMS (RDBMS): </span> In RDBMS, data is
-                organized in tables with rows and columns. Tables have
-                predefined structures, and relationships between tables are
-                established using keys. Examples include MySQL, PostgreSQL, and
-                Oracle Database.
+                <span> One Reason to Change: </span>
+
+                SRP suggests that a class should have only one reason to change,
+                meaning it should have only one responsibility or purpose. This
+                principle encourages high cohesion, where a class focuses on
+                doing one thing and doing it well.
               </li>
               <li class="nested">
-                <span>NoSQL DBMS: </span>
-                NoSQL databases provide flexible data models and are suitable
-                for unstructured or semi-structured data. They include various
-                subtypes:
-
-                <ul>
-                  <li>
-                    <span>Document Store: </span>
-                    Stores data in semi-structured documents (e.g., JSON, XML).
-                    Examples include MongoDB and Couchbase.
-                  </li>
-                  <li>
-                    <span> Key-Value Store: </span>
-                    Stores data as key-value pairs, often used for caching.
-                    Examples include Redis and Amazon DynamoDB.
-                  </li>
-                  <li>
-                    <span>Columnar Store: </span>
-
-                    Stores data in columns rather than rows, optimizing data
-                    retrieval for analytics. Examples include Apache Cassandra
-                    and HBase.
-                  </li>
-                  <li>
-                    <span> Graph DBMS: </span>
-                    Designed for managing data with complex relationships,
-                    making them suitable for applications like social networks.
-                    Examples include Neo4j and Amazon Neptune.
-                  </li>
-                </ul>
+                <span>Modular Design: </span>By adhering to SRP, you create
+                small, focused classes or modules that are easier to understand,
+                modify, and maintain. Each class/module has a clear and distinct
+                role in the system.
               </li>
-            </ul>
+              <li class="nested">
+                <span> Improved Testability:</span>
+                Classes with a single responsibility are typically easier to
+                test because you can isolate and test their functionality
+                independently. This makes it easier to identify and fix issues
+                when they arise.
+              </li>
+
+              <li class="nested">
+                <span> Enhanced Reusability: </span>
+                When each class has a clear and single responsibility, you can
+                reuse them in different parts of your software system without
+                worrying about unintended side effects or conflicts.
+              </li>
+
+              <li class="nested">
+                <span>Readability and Maintainability: </span>
+                Code that follows SRP is more readable because the
+                responsibilities of each class are well-defined. This makes it
+                easier for developers to understand, maintain, and extend the
+                codebase.
+              </li>
+            </ol>
           </li>
 
-          <li>
-            <span>Based on Data Structure:</span>
-
-            <ul>
-              <li>
-                <span>Structured DBMS: </span> Designed for structured data with
-                well-defined schemas. Relational databases are a prime example.
-              </li>
-              <li>
-                <span>Semi-Structured DBMS:</span> Suitable for data with
-                variable or evolving structures. Examples include
-                document-oriented databases (e.g., MongoDB) and XML databases.
-              </li>
-              <li>
-                <span> Unstructured DBMS: </span> Designed for unstructured
-                data, such as text, multimedia, and binary data. These systems
-                often rely on full-text search and indexing.
-              </li>
-            </ul>
-          </li>
-          <!--  -->
-
-          <li>
-            <span>Based on Deployment:</span>
-
-            <ul>
-              <li>
-                <span>Hybrid DBMS: </span> Combines elements of both on-premises
-                and cloud-based solutions, allowing data to be stored both
-                locally and in the cloud.
-              </li>
-              <li>
-                <span> Cloud-Based DBMS:</span> The DBMS and data are hosted and
-                managed by a cloud service provider (e.g., Amazon Web Services,
-                Microsoft Azure, Google Cloud). Users can access the database
-                remotely through the internet.
-              </li>
-              <li>
-                <span> On-Premises DBMS: </span> The DBMS software and data are
-                hosted on the organization's own servers or data centers.
-              </li>
-            </ul>
-          </li>
-          <!--  -->
-
-          <li>
-            <span>Based on Usage:</span>
-
-            <ul>
-              <li>
-                <span>OLTP (Online Transaction Processing) DBMS: </span>
-                Designed for transactional workloads with a high volume of read
-                and write operations. They prioritize fast and concurrent data
-                updates. Examples include Oracle Database and MySQL.
-              </li>
-              <li>
-                <span>OLAP (Online Analytical Processing) DBMS: </span> Designed
-                for complex queries and data analysis. OLAP databases optimize
-                data retrieval and aggregation. Examples include Microsoft SQL
-                Server Analysis Services and SAP BW.
-              </li>
-            </ul>
-          </li>
-          <!--  -->
-
-          <li>
-            <span>Based on Access Method:</span>
-
-            <ul>
-              <li>
-                <span>Centralized DBMS: </span> A single database server manages
-                and controls all data access. It is suitable for small-scale
-                applications but may have limitations in terms of scalability
-                and fault tolerance.
-              </li>
-              <li>
-                <span>Distributed DBMS: </span>
-                Data is distributed across multiple database servers or nodes.
-                This approach offers improved scalability, fault tolerance, and
-                load balancing. Examples include Cassandra and Hadoop
-                Distributed File System (HDFS).
-              </li>
-            </ul>
-          </li>
-          <!--  -->
-
-          <li>
-            <span>Based on Licensing:</span>
-
-            <ul>
-              <li>
-                <span>Open-Source DBMS: </span>DBMS software that is freely
-                available and can be modified and redistributed by users.
-                Examples include MySQL, PostgreSQL, and MongoDB (open-source
-                edition).
-              </li>
-              <li>
-                <span>Commercial DBMS:</span>Proprietary DBMS software that is
-                commercially licensed and often comes with vendor support.
-                Examples include Oracle Database, Microsoft SQL Server, and IBM
-                Db2.
-              </li>
-            </ul>
-          </li>
+        
         </ol>
       </div>
 
