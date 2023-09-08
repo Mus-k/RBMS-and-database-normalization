@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins" sans-serif;
+  padding: 40px  100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section div {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+section ol li,
+section ul li {
+  padding: 3px 0px;
+}
+section ul li span {
+  color: cadetblue;
+  font-weight: 600;
+}
+section ol li span {
+  color: cadetblue;
+  font-weight: 600;
+}
+section ul li ul{
+    padding-left: 10px;
+}
+section ul li ul  li span{
+    color: rgb(5, 178, 235) !important;
+    font-weight: 600;
+}
