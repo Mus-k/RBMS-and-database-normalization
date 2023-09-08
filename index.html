@@ -9,63 +9,163 @@
   <body>
     <section>
       <div class="questionOne">
-        <h3>
-          1. What is a Database? Explain with an example on why should we need a
-          database.
-        </h3>
+        <h3>1.What is RDBMS? Why do industries use RDBMS?</h3>
         <p>
-          A database is a structured collection of data that is organized and
-          stored in a way that allows for efficient retrieval, management, and
-          manipulation of information.
+          It is a type of database management system that organizes and stores
+          data in a structured format using tables with rows and columns.
         </p>
         <ul>
           <li>
-            <span> Product Information:</span> Details about each product,
-            including its name, description, price, manufacturer, and available
-            quantity.
+            <span> why industries use RDBMS:</span>
           </li>
           <li>
-            <span> Customer Information: </span> Information about your
-            customers, including their names, contact details, and order
-            history.
-          </li>
-          <li>
-            <span> Order Information: </span> Records of customer orders,
-            including order numbers, dates, items purchased, and payment
-            details.
-          </li>
-          <li>
-            <span> Inventory Information:</span> Data about your current stock
-            levels, ensuring that you have accurate information about available
-            products.
+            <span>
+              Data Structuring,Data Integrity,Query Language,Scalability
+              ,Security ,Data Analytics, Data Redundancy Reduction,Data Backup
+              and Recovery,Compliance and Auditing
+            </span>
           </li>
         </ul>
       </div>
       <div class="questionTwo">
-        <h3>
-          2. Write a short note on file base storage system. explain the major
-          challenges of a file-based storage system.
-        </h3>
+        <h3>2.Explain the relationship data model in depth.</h3>
         <p>
-          A file-based storage system is a method of storing and managing data
-          on a computer or storage device where data is organized and stored as
-          individual files. Each file can contain various types of data, such as
-          text, images, audio, documents, or any other digital information.
-          These files are typically organized within a hierarchical directory
-          structure, often referred to as folders or directories.
+          The relational data model is a fundamental concept in the field of
+          database management systems (DBMS). The relational model represents
+          data as sets of tables, where each table consists of rows and columns.
         </p>
-        <ul>
+        <ol>
           <li>
-            <span> Major Challenges of File-Based Storage Systems:</span>
+            <span>Tables (Relations):</span>
+            <ul>
+              <li>
+                Tables are used to store data in the relational model. They are
+                also referred to as "relations."
+              </li>
+              <li>
+                Each table has a name that uniquely identifies it within the
+                database schema.
+              </li>
+              <li>
+                Tables consist of rows (tuples) and columns (attributes). Each
+                row represents a single record or data instance, while each
+                column represents a specific attribute or property of the data.
+              </li>
+            </ul>
           </li>
           <li>
-            <span>
-              Limited Data Organization, Data Redundancy, Data Inconsistency,
-              Limited Data Retrieval, Concurrency Issues, Scalability
-              Challenges: Limited Security, Backup and Recovery Complexity
-            </span>
+            <span> Rows (Tuples): </span>
+            <ul>
+              <li>
+                Rows in a table represent individual data records or instances.
+              </li>
+              <li>
+                Each row is uniquely identified by a primary key, which is a
+                column or a combination of columns that ensures the uniqueness
+                of each row in the table.
+              </li>
+              <li>Rows contain the actual data values for each attribute.</li>
+            </ul>
           </li>
-        </ul>
+          <li>
+            <span>Columns (Attributes): </span>
+            <ul>
+              <li>
+                Columns represent specific attributes or properties of the data.
+              </li>
+              <li>
+                Each column has a name that uniquely identifies it within the
+                table.
+              </li>
+              <li>
+                Columns have a data type that specifies the kind of data that
+                can be stored in them (e.g., integers, strings, dates).
+              </li>
+              <li>
+                Columns can have constraints, such as data type constraints,
+                unique constraints, and foreign key constraints, which enforce
+                data integrity rules.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>Keys: </span>
+            <ul>
+              <li>
+                In the relational model, keys are used to establish
+                relationships between tables and enforce data integrity.
+              </li>
+              <li>
+                Primary Key: A primary key is a column or set of columns that
+                uniquely identifies each row in a table. It ensures that there
+                are no duplicate rows in the table.
+              </li>
+              <li>
+                Foreign Key: A foreign key is a column or set of columns in one
+                table that refers to the primary key of another table. It
+                enforces referential integrity by ensuring that values in the
+                foreign key column(s) match values in the referenced primary key
+                column(s) in the related table.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>Relationships: </span>
+            <ul>
+              <li>Relationships between tables are established using keys.</li>
+              <li>
+                Common relationship types in the relational model include
+                one-to-one, one-to-many, and many-to-many relationships.
+              </li>
+              <li>
+                Relationships are crucial for modeling complex data structures
+                and maintaining data consistency.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>Integrity Constraints: </span>
+            <ul>
+              <li>
+                Integrity constraints are rules defined on tables to ensure data
+                accuracy and consistency.
+              </li>
+              <li>
+                Examples of integrity constraints include primary key
+                constraints, unique constraints, foreign key constraints, and
+                check constraints.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>Normalization: </span>
+            <ul>
+              <li>
+                Normalization is the process of organizing data in a relational
+                database to minimize data redundancy and dependency, thereby
+                improving data integrity.
+              </li>
+              <li>
+                Normal forms (1NF, 2NF, 3NF, BCNF, etc.) are used to guide the
+                normalization process.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>SQL (Structured Query Language): </span>
+            <ul>
+              <li>
+                SQL is the standard language used to interact with relational
+                databases.
+              </li>
+              <li>
+                It allows users to perform operations such as querying data,
+                inserting, updating, and deleting data, and defining the
+                structure of tables and constraints.
+              </li>
+            </ul>
+          </li>
+        </ol>
       </div>
       <div class="questionThree">
         <h3>3. What is DBMS? What was the need for DBMS?.</h3>
